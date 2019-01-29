@@ -101,101 +101,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 $(document).ready(function () {
-  $('.js-slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    }, {
-      breakpoint: 600,
-      settings: {
-        dots: true,
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    }, {
-      breakpoint: 480,
-      settings: {
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      } // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-
-    }]
-  }); // let defaultSlider = {
-  //   dots: true,
-  //    infinite: true,
-  //    speed: 300,
-  //    slidesToShow: 3,
-  //    slidesToScroll: 3,
-  //    responsive: [
-  //      {
-  //        breakpoint: 1024,
-  //        settings: {
-  //          slidesToShow: 3,
-  //          slidesToScroll: 3,
-  //          infinite: true,
-  //          dots: true
-  //        }
-  //      },
-  //      {
-  //        breakpoint: 600,
-  //        settings: {
-  //          slidesToShow: 2,
-  //          slidesToScroll: 2
-  //        }
-  //      },
-  //      {
-  //        breakpoint: 480,
-  //        settings: {
-  //          slidesToShow: 1,
-  //          slidesToScroll: 1
-  //        }
-  //      }
-  //    ]
-  //  };
-  // if ($('.js-slider').length > 0 ) {
-  //     $('.js-slider').each( function() {
-  //         let $elem = $(this);
-  //         let $current = $elem.closest('.js-sliderBlock').find('.js-slider__current');
-  //         let $total = $elem.closest('.js-sliderBlock').find('.js-slider__total');
-  //         let options = $elem.data('options');
-  //
-  //         const newOptions = $.extend(defaultSlider, options);
-  //
-  //         $elem.on('init', function (event, slick, currentSlide, nextSlide) {
-  //             const showSlider = newOptions.slidesToShow;
-  //             let ttlSld = Math.ceil(slick.slideCount / showSlider);
-  //
-  //             ttlSld <= 9 ? $total.text('0' + ttlSld) : $total.text(ttlSld);
-  //         });
-  //
-  //         $elem.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-  //             const showSlider = newOptions.slidesToShow;
-  //             let i = (currentSlide ? currentSlide : 0) + 1;
-  //             let curSld = Math.ceil( i / showSlider);
-  //
-  //             curSld <= 9 ? $current.text('0' + curSld) : $current.text(curSld)
-  //         });
-  //
-  //         $elem.slick(
-  //             newOptions
-  //         );
-  //
-  //         $elem.addClass('ready');
-  //     });
-  // }
+  if ($('.js-slider').length > 0) {
+    $('.js-slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          dots: true,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
+    });
+  }
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
